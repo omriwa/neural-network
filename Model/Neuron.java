@@ -110,7 +110,9 @@ public class Neuron {
     /*get random in range of -1 and 1*/
     private double getRandom(){
         Random random = new Random();
-            
-        return random.nextDouble();
+        if(random.nextDouble() < 0.5)
+            return random.nextDouble() * -1;
+        else 
+            return random.nextDouble();
     }
 }
